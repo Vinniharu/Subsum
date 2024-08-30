@@ -7,10 +7,10 @@ const NetworkDropdown = ({ setNetwork, network }) => {
   const dropdownRef = useRef(null);
 
   const networks = [
-    { value: "etisalat", label: "Etisalat", image: "public/9mobile.png" },
-    { value: "mtn", label: "MTN", image: "public/mtn.png" },
-    { value: "glo", label: "Glo", image: "public/glo.png" },
-    { value: "airtel", label: "Airtel", image: "public/airtel.png" },
+    { value: "etisalat", label: "Etisalat", image: "/9mobile.png" },
+    { value: "mtn", label: "MTN", image: "/mtn.png" },
+    { value: "glo", label: "Glo", image: "/glo.png" },
+    { value: "airtel", label: "Airtel", image: "/airtel.png" },
   ];
 
   const handleSelect = (value) => {

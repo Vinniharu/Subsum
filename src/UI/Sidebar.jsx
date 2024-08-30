@@ -11,7 +11,7 @@ const Sidebar = () => {
         <LogoText />
         <SidebarLinks />
       </span>
-      <SidebarLink name={"Log Out"} link={"login"} icon={<CiLogout />} />
+      <SidebarLink name={"Log Out"} link={"/"} icon={<CiLogout />} />
     </div>
   );  
 }

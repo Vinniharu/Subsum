@@ -9,3 +9,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[routes]]
+  src = "/(.*)"
+  dest = "/index.html"

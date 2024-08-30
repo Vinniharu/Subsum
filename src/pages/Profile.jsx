@@ -5,6 +5,7 @@ import { user } from "../../data";
 import ProfileCard from "../components/Profile/ProfileCard";
 import ChangeSelector from "../components/Profile/ChangeSelector";
 import ChangePassword from "../components/Profile/ChangePassword";
+import ComingSoon from "../UI/ComingSoon";
 
 const Profile = () => {
   const [selected, setSelected] = useState("password");
@@ -19,7 +20,7 @@ const Profile = () => {
         </span>
         <span className="flex-[1] flex flex-col gap-4">
           <ChangeSelector selected={selected} setSelected={setSelected} />
-          <ChangePassword/>
+          {selected === "password" ? <ChangePassword/> : <ComingSoon/>}
         </span>
       </span>
     </>

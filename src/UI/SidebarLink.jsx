@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa"; 
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const SidebarLink = ({ link, icon, name, sublinks }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const SidebarLink = ({ link, icon, name, sublinks }) => {
   const LinkComponent = sublinks && sublinks.length > 0 ? "div" : NavLink;
 
   return (
-    <div className="w-full text-sm">
+    <div className="w-full  ">
       <LinkComponent
         to={`${link}`}
         className="flex w-full items-center gap-4 rounded-xl p-3 cursor-pointer text-[#4C689E]"
@@ -32,7 +32,7 @@ const SidebarLink = ({ link, icon, name, sublinks }) => {
       </LinkComponent>
 
       {sublinks && sublinks.length > 0 && isOpen && (
-        <div className="ml-6 flex flex-col">
+        <div className="ml-6 flex flex-col ">
           {sublinks.map((sublink, index) => (
             <NavLink
               key={index}

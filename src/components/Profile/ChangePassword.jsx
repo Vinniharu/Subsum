@@ -10,7 +10,7 @@ const ChangePassword = () => {
 
    const formHandler = (event) => {
       event.preventDefault();
-      if (enteredCurrent === current && enteredNew === enteredConfirm) {
+      if (enteredCurrent && enteredCurrent === current && enteredNew === enteredConfirm) {
          alert("Password has been changed!!")
          setCurrent(enteredNew)
       } else{
@@ -19,12 +19,12 @@ const ChangePassword = () => {
    }
 
    useEffect(() => {
-      if(enteredNew === enteredConfirm && enteredNew){
+      if(enteredCurrent && enteredNew === enteredConfirm && enteredNew){
          setValid(true)
       } else{
          setValid(false)
       }
-   }, [enteredNew, enteredConfirm])
+   }, [enteredCurrent, enteredNew, enteredConfirm])
 
   return (
     <form

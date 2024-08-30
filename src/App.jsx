@@ -16,9 +16,8 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="" element={<Login />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<Profile/>} />
             <Route path="buy-airtime/:id" element={<Loading />} />
             <Route path="buy-data/:id" element={<Loading />} />
             <Route path="tv-subscription/:id" element={<Loading />} />
@@ -28,6 +27,7 @@ const App = () => {
             <Route path="support" element={<Support />} />
             <Route path=":id" element={<Loading />} />
           </Route>
+          <Route path="/" element={<Login />} />
         </Routes>
       </Suspense>
     </Router>

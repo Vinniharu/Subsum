@@ -27,7 +27,7 @@ const App = () => {
             <Route path="support" element={<Support />} />
             <Route path=":id" element={<Loading />} />
           </Route>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Suspense>
     </Router>

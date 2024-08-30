@@ -1,10 +1,11 @@
 [build]
   command = "npm run build"
-  output = "build"
+  output = "dist"
 
-[[routes]]
-  src = "/(.*)"
-  dest = "/index.html"
+[dev]
+  command = "npm run dev"
 
-[env]
-  REACT_APP_API_URL = "@react_app_api_url"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
